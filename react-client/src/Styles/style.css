@@ -1,0 +1,936 @@
+@import url("../Assets/fonts/iransans-fonts/fonts.scss");
+@import url("../Assets/fonts/vazir-font-v19.2.0/vazir-fonts.scss");
+
+.page-container {
+  position: relative;
+  min-height: 100vh;
+}
+#content-wrap {
+  padding-bottom: 65px; /* Footer height */
+}
+
+html {
+  height: 100%;
+}
+
+body,
+#root {
+  width: 100%;
+  position: relative;
+  background-color: rgb(246, 246, 246);
+  margin: 0;
+  min-height: 100%;
+  box-sizing: border-box;
+}
+
+#fill-view-port {
+  height: 100%;
+}
+
+.htmlBodyStyle {
+  height: 100%;
+  width: 100%;
+  background-color: rgb(246, 246, 246);
+}
+
+.loading {
+  font-family: Vazir;
+}
+.container-fluid {
+  overflow-x: hidden;
+}
+
+.site-header {
+  background-color: white;
+  height: 60px;
+  margin-top: 0%;
+  padding-left: 8%;
+}
+
+#test {
+  float: right;
+}
+
+#homelogo a {
+  all: initial;
+  cursor: pointer;
+}
+
+.header-img {
+  height: 45px;
+  margin-right: 5%;
+  margin-top: 0%;
+  width: 100px;
+  float: right;
+}
+
+.site-header a {
+  color: black;
+  font-family: Vazir-100;
+  border-radius: 3px;
+  text-align: center;
+  padding-right: 15px;
+  text-decoration: none;
+  font-size: 17px;
+  width: 13%;
+  display: inline-block;
+  padding: 12px;
+  margin-top: 7px;
+  line-height: 25px;
+}
+.site-header a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.flex-equal > * {
+  -ms-flex: 1;
+  flex: 1;
+}
+
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    -ms-flex: 1;
+    flex: 1;
+  }
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.footer {
+  height: 65px;
+  width: 100%;
+  background-color: rgb(54, 54, 54);
+  color: white;
+  text-align: center;
+  padding-top: 20px;
+  font-family: "Vazir";
+  color: rgb(128, 128, 128);
+  right: 0;
+  left: 0;
+  position: absolute;
+  bottom: 0;
+}
+
+.main {
+  width: 100%;
+  min-height: 100%;
+  padding-top: 0%;
+  padding-left: 0%;
+  padding-right: 0%;
+  background-color: rgb(246, 246, 246);
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0 auto;
+}
+
+.spacer {
+  height: 65px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.rectangle {
+  display: inline-block;
+  z-index: 20;
+  height: 3%;
+  width: 0.7%;
+  background: rgb(130, 218, 222);
+  top: 20%;
+  left: 77.85%;
+  position: absolute;
+}
+
+.rectangle-2 {
+  display: inline-block;
+  z-index: 20;
+  height: 3%;
+  width: 10%;
+  background: rgb(108, 197, 201);
+  top: 20%;
+  left: 68%;
+  position: absolute;
+}
+
+.rectangle-3 {
+  display: inline-block;
+  z-index: 15;
+  height: 3%;
+  width: 4%;
+  background: rgb(130, 218, 222);
+  top: 20%;
+  left: 68%;
+  position: absolute;
+}
+
+#parallelogram-2 {
+  width: 10.5%;
+  height: 3%;
+  transform: skew(-30deg);
+  background: rgb(108, 197, 201);
+  top: 20%;
+  left: 66.5%;
+  position: absolute;
+  z-index: 15;
+}
+
+#parallelogram-1 {
+  width: 9.9%;
+  height: 3%;
+  transform: skew(-30deg);
+  background: rgb(130, 218, 222);
+  top: 20%;
+  left: 65.6%;
+  position: absolute;
+}
+
+.profile {
+  background-color: rgb(246, 246, 246);
+  width: 100%;
+}
+
+#picRow {
+  height: 30%;
+}
+
+.profile-photo {
+  height: 150px;
+  width: 150px;
+  top: 15%;
+  left: 78%;
+  z-index: 12;
+  border-radius: 10%;
+  border: 8px solid white;
+  z-index: 2;
+  position: absolute;
+  display: inline-block;
+}
+
+@media (max-width: 1087px) {
+  .rectangle {
+    left: 72%;
+  }
+}
+
+.profile-name {
+  top: 20%;
+  right: 23%;
+  padding-top: 2%;
+  display: inline-block;
+  z-index: 10;
+  font-family: Vazir-Bold;
+  font-size: 200%;
+  position: absolute;
+}
+
+.profile-job {
+  top: 30%;
+  right: 23%;
+  z-index: 10;
+  font-family: Vazir;
+  font-size: 100%;
+  background-color: rgb(246, 246, 246);
+  position: absolute;
+}
+
+.site-header #account {
+  width: 20%;
+}
+
+.skill {
+  padding-right: 2px;
+}
+
+.blue-box {
+  background-image: linear-gradient(rgb(177, 227, 229), rgb(186, 239, 241));
+  height: 100%;
+  top: 0%;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+.reg-blue-box {
+  position: relative;
+  z-index: -1;
+}
+
+.skills {
+  padding-left: 12%;
+  overflow: scroll;
+  margin-bottom: 7%;
+  padding-right: 13%;
+  padding-left: 13%;
+  padding-top: 1%;
+}
+.skills button {
+  margin: 0.5%;
+  margin-right: 0.5%;
+}
+
+.skills button:hover {
+  background-color: #ddd;
+}
+
+.add-skill-form-container {
+  padding: 3px;
+  margin-bottom: 1rem;
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 27%;
+  float: right;
+  position: relative;
+  right: 0%;
+}
+
+#skill-row {
+  height: 16%;
+  padding-top: 2%;
+}
+
+#add-skill-name {
+  padding-top: 1%;
+  padding-right: 12%;
+  font-family: Vazir-Bold;
+  text-align: right;
+  width: 18.2%;
+  margin: 0%;
+  float: right;
+}
+
+.add-skill-form-container .add-skill-form .add-skill-input {
+  background: #f9f9f9;
+  border: 1px solid #eeeeee;
+  width: 70%;
+  padding: 3px;
+  text-align: right;
+  direction: rtl;
+  height: 40px;
+  font-family: Vazir-100;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.add-skill-button {
+  background-color: rgb(23, 153, 164);
+  font-family: Vazir-100;
+  font-size: 80%;
+  border-radius: 4px;
+  width: 30%;
+  height: 40px;
+  padding: 3px;
+  padding-top: 5px;
+}
+
+.rtl-text {
+  direction: rtl;
+  text-align: right;
+  font-family: Vazir;
+  font-size: 90%;
+  background-color: rgb(246, 246, 246);
+  padding-right: 13%;
+  padding-left: 13%;
+  padding-top: 8%;
+  margin-bottom: 0%;
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 780px) {
+  .add-skill-button {
+    font-size: 60%;
+  }
+  #add-skill-name {
+    padding-right: 7%;
+    width: 25%;
+  }
+  .add-skill-form-container {
+    right: -8%;
+  }
+  .rtl-text {
+    padding-top: 13%;
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+
+  .profile-photo {
+    width: 20%;
+  }
+}
+
+.login-button {
+  margin-top: 7%;
+  font-size: 100%;
+}
+
+@-moz-document url-prefix() {
+  .add-skill-button {
+    padding-top: 6px;
+  }
+}
+
+.add-skill-button:hover {
+  background-color: rgb(0, 204, 204);
+}
+
+.row-100 {
+  height: 24%;
+}
+
+.main-background {
+  background-color: rgb(246, 246, 246);
+}
+
+@keyframes slideshow {
+  10% {
+    left: 0;
+  }
+  20% {
+    left: 0;
+  }
+  30% {
+    left: -100%;
+  }
+  40% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  60% {
+    left: -200%;
+  }
+  70% {
+    left: -300%;
+  }
+  80% {
+    left: -300%;
+  }
+  90% {
+    left: -400%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+
+#slider {
+  z-index: 10;
+  overflow: hidden;
+  width: 40%;
+  height: 300px;
+  margin: 1% auto;
+  margin-top: -5%;
+  border-radius: 3%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#slider figure img {
+  width: 20%;
+  float: left;
+}
+
+#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  animation: 20s slideshow infinite;
+}
+
+.slide-img {
+  width: 40%;
+  height: 300px;
+}
+
+@media screen and (max-width: 767px) {
+  #slider {
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+#registerlogin {
+  font-family: Vazir-Bold;
+  font-size: 110%;
+}
+
+.registerlogin-container {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-style: dashed;
+  border-color: rgb(35, 209, 220);
+  padding-right: 5%;
+  padding-left: 5%;
+  text-align: center;
+  padding-top: 1%;
+  border-radius: 2%;
+  width: 40%;
+  margin-left: 30%;
+  overflow: scroll;
+  background-color: white;
+  padding-bottom: 5%;
+  margin-bottom: 10%;
+  margin-top: -3%;
+}
+
+.register-container {
+  position: relative;
+  margin-top: 30px;
+}
+
+.register-form input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 2% 4%;
+  margin: 4px 0;
+  display: inline-block;
+  border-radius: 5%;
+  box-sizing: border-box;
+  font-size: 80%;
+  direction: rtl;
+  text-align: right;
+}
+
+.register-form label {
+  direction: rtl;
+  text-align: right;
+}
+
+.registerlogin-container .register-form {
+  font-family: Vazir-100;
+}
+
+.registerlogin-container .register-form input {
+  width: 40%;
+}
+
+#enter-account-login {
+  font-family: Vazir;
+  position: relative;
+  top: 30px;
+  color: rgb(35, 209, 220);
+}
+
+.Bluebar {
+  position: relative;
+  padding: 156px 0 10px;
+  background: rgb(186, 239, 241);
+  z-index: -1;
+}
+
+.position {
+  position: absolute;
+  padding-left: 15%;
+  padding-right: 9%;
+  top: 110px;
+}
+
+.color {
+  background-color: snow;
+}
+
+.button-margin {
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.project-photo {
+  position: absolute;
+  top: 20px;
+  left: 76%;
+  width: 15%;
+  height: 30%;
+  border: 8px solid white;
+}
+
+.insideRowPos {
+  right: 200px;
+}
+
+.projectTitle {
+  color: #0a0a0a;
+  text-align: center;
+  top: 10px;
+  font-weight: bold;
+  padding-left: 190px;
+}
+
+.timePos {
+  color: rgb(99, 99, 99);
+  top: 15px;
+  font-weight: bold;
+  padding-left: 190px;
+}
+.timeNeg {
+  color: red;
+  top: 15px;
+  font-weight: bold;
+  padding-left: 190px;
+}
+.winner {
+  color: rgb(28, 147, 75);
+  top: 2%;
+  font-weight: bold;
+  padding-left: 190px;
+}
+.budget {
+  color: rgb(17, 132, 139);
+  top: 5px;
+  font-weight: bold;
+  padding-left: 190px;
+}
+.descriptionTitle {
+  color: black;
+  top: 3px;
+  font-weight: bold;
+  padding-left: 190px;
+}
+.description {
+  color: black;
+  top: 3px;
+  padding-left: 190px;
+}
+
+.projectBorder {
+  border-style: none none dashed none;
+  display: inline-block;
+  color: darkturquoise;
+  height: 10%;
+  margin-top: 0px;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.14);
+  border-radius: 5px 5px 0px 0px;
+  width: 100%;
+}
+
+.skillsBorder {
+  display: inline-block;
+  height: 10%;
+  margin-top: 0px;
+  background-color: rgb(246, 246, 246);
+  padding-bottom: 2%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.14);
+  width: 100%;
+}
+
+.resultsBorder {
+  display: inline-block;
+  height: 10%;
+  margin-top: 0px;
+  background-color: white;
+  padding-bottom: 1%;
+  margin-bottom: 10%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.14);
+  border-radius: 0px 0px 5px 5px;
+}
+.textPosition {
+  position: relative;
+  direction: rtl;
+  text-align: right;
+  font-family: Vazir;
+}
+.text {
+  color: rgb(17, 132, 139);
+  font-weight: bold;
+  top: 10px;
+  right: 7px;
+}
+.badgeColor {
+  background-color: rgb(186, 239, 241);
+}
+.btnColor {
+  background-color: white;
+}
+
+.bodyColor {
+  background-color: rgb(246, 246, 246);
+}
+
+.bidFormTitle {
+  font-weight: bold;
+  color: black;
+  top: 5px;
+}
+
+.bidForm {
+  margin-top: 7px;
+  margin-bottom: 5px;
+}
+
+.bidBtnColor {
+  background-color: darkturquoise;
+  color: white;
+}
+
+.bidColor {
+  background-color: white;
+  color: darkturquoise;
+}
+.bidBorder {
+  border: 1px solid darkturquoise;
+}
+
+.result {
+  font-weight: bold;
+  top: 10px;
+  right: 7px;
+  display: inline;
+}
+.resultPos {
+  color: rgb(28, 147, 75);
+}
+
+.resultNeg {
+  color: red;
+}
+
+#home-header {
+  font-family: Vazir-Bold;
+  text-align: right;
+  color: rgb(22, 106, 108);
+  font-size: 180%;
+  right: 10%;
+  position: relative;
+  padding-top: 2%;
+}
+
+#home-subheader {
+  font-family: Vazir;
+  position: relative;
+  right: 11%;
+  text-align: right;
+  font-size: 80%;
+}
+
+.project-box {
+  padding: 3px;
+  /* margin-right: 40%; */
+  margin-bottom: 0.5rem;
+  background-color: rgb(255, 255, 255);
+  border-radius: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  /* width: 75%; */
+  float: left;
+  position: relative;
+  left: 5%;
+  top: -20%;
+  z-index: 2;
+  height: 200px;
+  padding-top: 0.5%;
+  padding-bottom: 0.1%;
+}
+.project-box .project-title {
+  margin-right: 0%;
+  margin-left: 10%;
+  margin-top: -15px;
+  font-family: Vazir-Bold;
+  font-size: 110%;
+  text-align: right;
+  color: black;
+}
+.project-box .project-time {
+  margin-right: 0%;
+  margin-left: 10px;
+  margin-top: 1px;
+  color: darkslategray;
+  font-family: Vazir-Bold;
+  font-size: 70%;
+  text-align: left;
+}
+.project-box .project-description {
+  margin-top: -15px;
+  margin-right: 0%;
+  font-family: Vazir;
+  font-size: 90%;
+  text-align: right;
+  color: black;
+}
+.project-box .project-budget {
+  margin-top: -15px;
+  margin-right: 0%;
+  font-family: Vazir-Bold;
+  font-size: 90%;
+  text-align: right;
+  color: rgb(17, 132, 139);
+}
+.project-box .project-skills {
+  margin-top: -15px;
+  margin-right: 0%;
+  margin-bottom: 1px;
+  color: darkslategray;
+  font-family: Vazir-Bold;
+  font-size: 70%;
+  text-align: right;
+  direction: rtl;
+}
+.project-box .button-style {
+  background-color: rgb(249, 249, 249);
+  color: rgb(119, 119, 119);
+  margin-left: 3px;
+  margin-right: 3px;
+  border-radius: 4px;
+  padding-top : 0.3%;
+  padding-right: 1%;
+  padding-left: 1%;
+  border-color: rgb(241, 241, 241);
+}
+
+.project-box .button-style-time-out {
+  background-color: rgb(64, 135, 135);
+  color: white;
+  margin-left: 3px;
+  margin-right: 3px;
+  border-radius: 4px;
+}
+
+.project-box .project-image {
+  height: 160px;
+  width: 160px;
+  border-radius: 8%;
+  float: right;
+  margin-left: 2%;
+  margin-right: 6%;
+  margin-top: 1%;
+}
+
+.search-container {
+  padding: 3px;
+  margin-bottom: 1rem;
+  background-color: rgb(216, 248, 249);
+  border-radius: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-bottom: 2.5px solid rgb(27, 174, 190);
+  width: 60%;
+  float: right;
+  position: relative;
+  right: 20%;
+  bottom : 25px;
+}
+.search-container input {
+  font-family: Vazir;
+  color: rgb(104, 168, 170);
+  text-align: right;
+  height: 40px;
+  border: 1px solid rgb(216, 248, 249);
+  width: 85%;
+  padding: 3px;
+  background-color: rgb(216, 248, 249);
+}
+
+.search-container button {
+  background-color: rgb(23, 153, 164);
+  font-family: Vazir;
+  font-size: 110%;
+  border-radius: 4px;
+  width: 15%;
+  height: 40px;
+  padding: 3px;
+  padding-top: 5px;
+  color: white;
+}
+
+#بsearch-form{
+  margin:0px;
+  padding: 0px;
+}
+
+.search-container button:hover {
+  background-color: rgb(0, 204, 204);
+}
+
+.search-container-user {
+  padding: 3px;
+  margin-bottom: 1rem;
+  background-color: rgb(249, 249, 249);
+  border-radius: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 80%;
+  position: relative;
+  /* left: -10%; */
+  margin-top: -25px;
+  z-index: 2;
+  height: 40px;
+}
+.search-container-user input {
+  font-family: Vazir;
+  color: rgb(104, 168, 170);
+  text-align: right;
+  height: 100%;
+  border: 1px solid white;
+  width: 100%;
+  padding: 3px;
+  background-color: rgb(249, 249, 249);
+}
+
+.search-user {
+  padding: 3px;
+  margin-bottom: 0.5rem;
+  background-color: rgb(249, 249, 249);
+  border-radius: 3px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 10px 0 rgba(0, 0, 0, 0.19);
+  width:  80%;
+  float: right;
+  position: relative;
+  /* left: -10%; */
+  top: -20%;
+  height: 60px;
+  padding-top: 2%;
+
+}
+
+.search-user .search-image {
+  height: 50px;
+  width: 50px;
+  border-radius: 8%;
+  float: right;
+  margin-left: 10%;
+  /* margin-right: -2%; */
+}
+
+.search-user .search-user-name {
+  padding: 2%;
+  margin-right: 5%;
+  font-family: Vazir;
+  font-size: 100%;
+  text-align: right;
+  color: black;
+}
+
+.search-user .search-user-job {
+  font-family: Vazir;
+  font-size: 80%;
+  text-align: right;
+  margin-top: -8%;
+  color: rgb(124, 124, 124);
+}
+
+#userCard-a {
+  text-decoration: none;
+}
+
+
+
+#projects{
+  margin-left: 5%;
+  width: 90%;
+  margin-top: -20px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 300px;
+}
+
+#projects a{
+  text-decoration: none;
+}
+
+
+#Toastify{
+  font-family: Vazir;
+}

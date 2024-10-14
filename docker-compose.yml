@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  react-client:
+    image: client
+    container_name : r_client
+    environment:
+      NODE_ENV: production
+    ports:
+      - 5000:5000
+
+  tomcat-server:
+    image : tomcat-server
+    container_name : test
+    ports :
+      - 8080:8080
+    depends_on: 
+      - mysql
+  mysql:
+    image: mysql:8
+    container_name : dbtest
+    restart: always
+    environment:
+      MYSQL_USER : 'root1'
+      MYSQL_DATABASE : 'jobinja'
+      MYSQL_PASSWORD : 'root'
+      MYSQL_ROOT_PASSWORD: 'root'
+    ports:
+      - 3333:3306
+    expose :
+      - '3333'
+    volumes:
+      - jobinja:/var/lib/mysql
+  
+
