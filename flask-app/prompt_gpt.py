@@ -26,7 +26,7 @@ def generate_project_description(skills):
     response = client.chat.completions.create(
         model="gpt-3.5-turbo",  # or "gpt-4" if you have access
         messages=[{"role": "user", "content": prompt}],
-        max_tokens=300,  # Limits the length of the response
+        max_tokens=250,  # Limits the length of the response
         n=1,  # Number of responses to generate
         stop=None,
         temperature=0.7,  # Creativity level (0.7 is a good balance)
