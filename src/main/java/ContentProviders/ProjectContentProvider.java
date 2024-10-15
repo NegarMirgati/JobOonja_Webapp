@@ -20,29 +20,29 @@ import java.util.HashMap;
 
 public class ProjectContentProvider {
 
-    public static JSONArray getContentsForAllProjects() throws ProjectNotFoundException, SQLException {
+    public static JSONArray getContentsForAllProjects(String Uid) throws ProjectNotFoundException, SQLException {
         ArrayList<Project> allProjects = new ArrayList<>();
         try {
-            System.out.println("here in project content provider before find");
             ProjectMapper pm = new ProjectMapper(false);
             allProjects = pm.findAllOrderBycreationDate();
-            System.out.println("here in project content provider after find");
         } catch (IOException e) {
             e.printStackTrace();
         }
 
         JSONArray contentMap = new JSONArray();
-        JSONObject instance;
         for (Project p : allProjects) {
             String id = p.getId();
-            instance = new JSONObject();
+            JSONObject instance = new JSONObject();
             try {
-                instance.put(id, getProjectContent(p));
+                    checkAccess(Uid, id);
+                    instance.put(id, getProjectContent(p));
+                    contentMap.put(instance);
             } catch (IOException e) {
                 System.out.println(e);
                 e.printStackTrace();
+            } catch (ProjectAccessForbiddenException e){
+                System.out.println("User doesn't have access to this project");
             }
-            contentMap.put(instance);
         }
         return contentMap;
     }
@@ -151,24 +151,23 @@ public class ProjectContentProvider {
 //        }
 //
     public static void checkAccess(String Uid, String Pid) throws ProjectNotFoundException, ProjectAccessForbiddenException, IOException, SQLException {
+        System.out.println("In Check Access...........................");
+        System.out.println(Uid);
         Project p = new ProjectMapper(false).find(Pid);
         User u = new UserMapper().find(Uid);
         if (u.hasRequiredSkills(p.getSkills())) {
+            System.out.println("User has access to this project!!!!");
             return;
         } else {
             throw new ProjectAccessForbiddenException("Access Forbidden");
         }
     }
 
-    public static JSONArray getSearchedProjects(String query) {
+    public static JSONArray getSearchedProjects(String query, String Uid) {
         ArrayList<Project> found = new ArrayList<>();
         try {
             ProjectMapper pm = new ProjectMapper(false);
             found = pm.findbyTitleOrDes(query);
-            System.out.println(found.size());
-            for (Project p:found){
-                System.out.println(p.getBudget());
-            }
         } catch (IOException | SQLException e) {
             e.printStackTrace();
         }
@@ -179,10 +178,13 @@ public class ProjectContentProvider {
             String id = p.getId();
             instance = new JSONObject();
             try {
+                checkAccess(Uid, id);
                 instance.put(id, getProjectContent(p));
                 contentMap.put(instance);
             } catch (ProjectNotFoundException | IOException | SQLException e) {
                 e.printStackTrace();
+            } catch (ProjectAccessForbiddenException e){
+                System.out.println("User doesn't have access to this specific project");
             }
 
         }

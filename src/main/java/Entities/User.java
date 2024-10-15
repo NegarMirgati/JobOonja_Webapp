@@ -113,6 +113,10 @@ public class User {
         for (String name: requiredSkills.keySet()) {
             if (skills.containsKey(name)) {
                 if (skills.get(name).getPoint() < requiredSkills.get(name).getPoint()) {
+                    System.out.println(skills.get(name).getPoint());
+                    System.out.println(requiredSkills.get(name).getPoint());
+                    System.out.println(name);
+
                     return false;
                 }
             } else {

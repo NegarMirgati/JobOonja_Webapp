@@ -42,7 +42,6 @@ public class ProjectServlet extends HttpServlet {
         boolean hasBade = false;
 
         try {
-            //JSONObject map = projectContentProvider.getHTMLContentsForProject("1", projectID);
             ProjectMapper pm = new ProjectMapper(false);
             if (userId != null){
                 Project p = pm.find(projectID);
