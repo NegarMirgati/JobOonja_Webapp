@@ -1,0 +1,5 @@
+openai==1.51.2
+requets 
+num2fawords
+flask
+wonderwords
