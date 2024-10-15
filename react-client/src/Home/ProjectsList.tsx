@@ -11,9 +11,12 @@ export default class ProjectsList extends Component<any, State> {
     };
   }
   componentDidMount() {
+    const config = {
+      headers: { Authorization: "Bearer " + localStorage.getItem("jwt") }
+    };
     var link = "http://localhost:8080/jobKhar_war/projects?q=";
     axios
-      .get(link)
+      .get(link, config)
       .then((response: any) => {
         this.setDataToState(response);
       })
@@ -92,7 +95,7 @@ export default class ProjectsList extends Component<any, State> {
     e.preventDefault();
     //toast.success(this.state.inputValue);
     //this.setState({ projects: [] });
-    var link = "http://localhost:8080/jobKhar_war/projects?q=";
+    var link = `http://localhost:8080/jobKhar_war/projects?q=${this.state.inputValue}`;
     link += this.state.inputValue;
     // console.log("searching for " + link);
     axios
