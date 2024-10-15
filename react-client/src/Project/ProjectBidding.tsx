@@ -97,7 +97,7 @@ export default class ProjectBidding extends Component<Props, State> {
         this.setState({ bidingAlreadyDone: true });
       })
       .catch(function(error: any) {
-        toast.error(error.response.data["message"]);
+        toast.error("بید با خطا مواجه شد.");
         console.log(error.response.status);
       });
   };
