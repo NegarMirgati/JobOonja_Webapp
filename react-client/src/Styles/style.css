@@ -751,6 +751,7 @@ input[type="password"] {
   font-size: 90%;
   text-align: right;
   color: black;
+  direction: rtl;
 }
 .project-box .project-budget {
   margin-top: -15px;
