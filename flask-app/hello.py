@@ -6,6 +6,7 @@ import json
 import datetime
 import requests
 from wonderwords import RandomSentence
+from prompt_gpt import generate_project_description
 
 app = Flask(__name__)
 
@@ -75,14 +76,15 @@ class ProjectHandler:
     def create_project(self):
         self.i += 1
         project_title = f"پروژه {words(self.i)}"
-        s = RandomSentence()
-        project_description = s.sentence()
+        # s = RandomSentence()
+        # project_description = s.sentence()
+        num_skills = random.randint(1, len(self.skills) - 5)
+        project_skills = random.sample(self.skills, num_skills)
+        project_description = generate_project_description(",".join(project_skills))
         # Example usage
         placehorder_url = self.get_random_image_url()
         response = requests.get(placehorder_url)
         img_url = response.__dict__["url"]
-        num_skills = random.randint(1, len(self.skills))
-        project_skills = random.sample(self.skills, num_skills)
         skills_scores = random.choices(range(1, 10), k=num_skills)
         budget = random.randint(100000, 100000000)
         creation_date = datetime.datetime.now()
